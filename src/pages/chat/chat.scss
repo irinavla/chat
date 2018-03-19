@@ -1,0 +1,46 @@
+page-chat {
+    .inner-message {
+        display:inline-block;
+        padding: 5px 10px;
+        margin: 5px;
+        color:white;
+        border-radius: 3px;
+        .username {
+            font-weight: bold;
+            font-size:80%;
+        }
+        .message-content {
+            font-size:120%;
+        }
+        &.messageLeft {
+            background: color($colors, 'primary');
+            float:left;
+            clear:both;
+        }    
+        &.messageRight {
+            background: color($colors, 'secondary');
+            float:right;
+            clear:both;
+        }
+    }
+    
+    .special {
+        .messageLeft,
+        .messageRight {
+            background: color($colors, 'default')!important;
+            color:color($colors, 'dark')!important;
+        } 
+
+    }
+    
+    #footer-content {
+        display:flex;
+        flex-direction: row;
+        .elem:first-child {
+            flex-grow:1;
+        }
+        button {
+            border-radius:50%;
+        }
+    }
+}
